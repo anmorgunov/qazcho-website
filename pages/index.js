@@ -2,6 +2,13 @@ import Head from 'next/head'
 import Axios from "axios";
 import { useState, useEffect } from "react";
 import { push } from "@socialgouv/matomo-next";
+import Container from "../components/container"
+import Title from "../components/title";
+import Heading from "../components/heading";
+import Paragraph from "../components/paragraph";
+import Click from "../components/click"
+import List from "../components/list"
+import SubHead from "../components/subheading"
 
 const socialSVG = {
   github: <svg className="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>,
@@ -13,34 +20,57 @@ const socialSVG = {
   vk: <svg className="fill-current" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>VK icon</title><path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.391 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.744-.576.744z"/></svg>,
 }
 
+const DOCUMENTS = [
+  {
+    title: "Положение о РКСЗОХ",
+    href: "/docs/npa/ref.pdf",
+    lastUpdated: "14 ноября 2021"
+  },
+  {
+    title: "Стратегия развития олимпийского движения по химии",
+    href: "/docs/npa/ref.pdf",
+    lastUpdated: "14 ноября 2021"
+  },
+  {
+    title: "Концепция тем и сложности республиканской олимпиады",
+    href: "/docs/npa/ref.pdf",
+    lastUpdated: "14 ноября 2021"
+  },
+  {
+    title: "Алгоритм определения состава сборной РК",
+    href: "/docs/npa/ref.pdf",
+    lastUpdated: "14 ноября 2021"
+  },
+  {
+    title: "Минимальный «Комплект заданий»",
+    href: "/docs/npa/ref.pdf",
+    lastUpdated: "14 ноября 2021"
+  },
+  {
+    title: "Правила оформления задач",
+    href: "/docs/npa/ref.pdf",
+    lastUpdated: "14 ноября 2021"
+  },
+  {
+    title: "Правила проверки работ учащихся",
+    href: "/docs/npa/ref.pdf",
+    lastUpdated: "14 ноября 2021"
+  }
+]
+
 export default function Home() {
-  const [trivia, setTrivia] = useState({
-    isFetching: true,
-    data: {}
-  })
-  const [social, setSocial] = useState({
+  const [members, setMembers] = useState({
     isFetching: true,
     data: {}
   })
   useEffect(() => {
     Axios({
-      url: "/data/trivia.json",
+      url: "/data/members.json",
       params: {
         timestamp: (new Date()) * 1
       }
     }).then((res) => {
-      setTrivia({
-        isFetching: false,
-        data: res.data
-      })
-    })
-    Axios({
-      url: "/data/social.json",
-      params: {
-        timestamp: (new Date()) * 1
-      }
-    }).then((res) => {
-      setSocial({
+      setMembers({
         isFetching: false,
         data: res.data
       })
@@ -49,48 +79,73 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Anton Morgunov</title>
-        <meta name="description" content="Beyond Curriculum founder and MIT student" />
-        <meta name="keywords" content="Anton Morgunov, Антон Моргунов, Anton Morgunov website, Anton Morgunov olympiads, Моргунов Антон, Моргунов Антон химия, Моргунов Антон олимпиады, Моргунов Антон mit, Anton Morgunov MIT" />
+        <title>QazChO</title>
+        <meta name="description" content="Официальный сайт республиканской коллегии составителей задач по олимпиадной химии" />
+        <meta name="keywords" content="составители олимпиад в Республике Казахстан, олимпийское движение Республики Казахстан по химии, составители и жюри республиканских олимпиад" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="my-5 md:my-20 mx-auto flex justify-center">
-        <div className="container rounded-3xl shadow-2xl w-11/12 md:w-8/12 dark:shadow-none dark:border-2 dark:border-gray-300">
-          <div className="flex flex-col justify-center lg:grid lg:grid-cols-3 lg:gap-0 my-3 py-3">        
-            <div className="w-5/12 lg:w-8/12 mx-auto relative top-10">
-              <img 
-                src="/assets/images/combined.png"
-                alt="Photo of Anton Morgunov"
-              />
-            </div>
-            <div className="mx-auto w-9/12 lg:w-full lg:col-span-2">
-              <h2 layoutId="index-title" className="text-3xl sm:text-4xl font-bold mb-2 sm:mb-5 mt-20 lg:mt-10">Anton Morgunov</h2>
-              <p
-              layoutId="index-intro" className="text-sm sm:text-base lg:w-10/12">
-                 Hello! My name is Anton. I’m an aspiring chemist interested in learning about the way the world works: be it quantum mechanics or organic chemistry. Besides, I enjoy teaching and helping other students who are interested in science and self-development.
-              </p>
-              <div className="my-5">
-                {trivia.isFetching ? null : trivia.data.map((el, i) => (
-                  <div className="sm:w-5/12">
-                    <div className="grid md:gap-10 grid-cols-2 text-sm sm:text-base">
-                      <p className="font-bold w-max">{el.prefix}:</p> 
-                      <p className={`w-max -ml-10 lg:-ml-4 ${el.style ? "text-accent-500 hover:text-accent-700" : ""}`} dangerouslySetInnerHTML={{__html: el.content}}></p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="grid grid-cols-7 md:w-7/12 2xl:w-5/12">
-                {social.isFetching ? null : social.data.map((el, i) => (
-                  <div className="my-5 w-6"> 
-                    <a href={el.link} onClick={() => push(["trackEvent", "indexSocial", el.name])}>{socialSVG[el.icon]}</a>
-                  </div>
-                ))}
-              </div>
-              
-            </div>
-          </div>
-        </div>
+      <main className="w-3/4 m-auto">
+        <Container>
+          <Title>Олимпиады по химии в РК</Title>
+          <Paragraph>Добро пожаловать на официальный сайт Республиканской Коллегии Составителей Задач по Олимпиадной Химии (РКСЗОХ). Здесь вы найдете актуальную информацию о принципах, ценностях, философии Коллегии, а так же последние утвержденные методики отбора учеников в Сборную Республики Казахстан, концепции тем и сложности различных олимпиад, в том числе республиканской олимпиады школьников по химии</Paragraph>
+        </Container>
+
+        <Container>
+          <Heading>Официальные документы</Heading>
+          <Paragraph>В этом разделе всегда будет полный и актуальный список всех документов, утвержденных Коллегией. Эти документы выступают истиной первой инстанции во всех вопросах, связанный с деятельностью Коллегии, а поэтому могут быть написаны строгим языком. В других разделах этого сайта мы можем представлять ту же информацию в более наглядном и простом виде, но, если когда-нибудь что-то написанное в других разделах этого сайта не будет соответствовать информации в этих документах &mdash; более верной является информация в этих документах.</Paragraph>
+          <List>
+            {DOCUMENTS ? DOCUMENTS.map((doc, i) => (
+              <li key={i}><Click href={doc.href} title={doc.title} /> <span className="text-sm italic">(Обновлено: {doc.lastUpdated})</span></li>
+            )) : null}
+          </List>
+        </Container>
+
+        <Container>
+          <Heading>Зачем была создана Коллегия?</Heading>
+          <Paragraph>Коллегия была создана</Paragraph>
+        </Container>
+
+        <Container>
+          <Heading>Структура Коллегии</Heading>
+          <Paragraph>РКСЗОХ состоит из трех органов:</Paragraph>
+          <List>
+            <li>Высший совет</li>
+            <li>Общее собрание</li>
+            <li>Общественная комиссия</li>
+          </List>
+          <SubHead>Общее собрание Коллегии</SubHead>
+          <Paragraph>Общее собрание объединяет людей, разделяющих принципы и правила Коллегии и способных составлять хорошие задачи по олимпиадной химии. Для вступления в общее собрание Коллегии вы должны соответствовать следующим требованиям:</Paragraph>
+          <List>
+            <li>Не заниматься подготовкой учеников, которые будут участвовать на олимпиадах в текущем учебном году, к олимпиадам по химии после 1 октября текущего учебного года</li>
+            <li>Не состоять в прямом кровном родстве с учениками, которые будут участвовать на олимпиадах по химии в текущем учебном году.</li>
+            <li>Быть медалистом республиканской олимпиады по химии, Международной Менделеевской олимпиады или IChO; ИЛИ быть учителем, который подготовил не меньше трех медалистов вышеупомянутых олимпиад и значительный вклад которого подтверждается учениками.</li>
+          </List>
+          <ol className="list-decimal ml-8">
+            <li>Составить как минимум два <Click href="" title="комплекта заданий"/> в соответствии <Click href="" title="правилами оформления"/></li>
+            <li>Отправить свои комплекты заданий на <Click href="mailto:problems@qazcho.kz" title="электронную почту Коллегии"/>, сопроводив свое письмо описанием того, как вы соответствуете требованиям выше</li>
+          </ol>
+          <SubHead>Высший совет Коллегии</SubHead>
+          <Paragraph>Высший совет Коллегии представляет из себя группу людей, сделавших значительный вклад в развитие олимпийского движения (через составление заданий), а так честность которых не вызывает сомнений. Именно среди членов Высшего совета происходит детальное планирование заданий предстоящих олимпиад: какие разделы химии они покроют? Какие навыки будут проверять? В чем будет основная идея задачи? На такие вопросы нужно отвечать чтобы задания олимпиады были не «солянкой» случайно выбранных задач, а имели продуманную концепцию, были более-менее полноценными (например, чтобы не было неоправданного фокуса на одном разделе химии).</Paragraph>
+          <Paragraph>Помимо этого, в полномочия Высшего совета входит:</Paragraph>
+          <List>
+            <li>Определение алгоритмов определения состава сборной РК</li>
+            <li>Определение стратегии развития олимпийского движения</li>
+            <li>Определение концепции тем и сложности республиканских олимпиад</li>
+            <li>Определение <span className="italic">комплекта заданий</span>, необходимого для вступления в Коллегию</li>
+            <li>Определение наиболее достойных кандидатур из числа членов Коллегии, которые будут сопровождать сборную РК в качестве менторов на международных олимпиадах</li>
+          </List>
+          
+        </Container>
+
+        <Container>
+          <Heading>Для потенциальных составителей</Heading>
+          <Paragraph>
+            Если вы умеете и хотите составлять задачи по олимпиадной химии, вы можете вступить в Коллегию
+          </Paragraph>
+        </Container>
+        
+        
       </main>
 
     </div>
