@@ -40,7 +40,22 @@ export default function Members() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Wrapper>
-                
+                <Container>
+                    <Heading>Участники общего собрания Коллегии:</Heading>
+
+                    <div>
+                        {members.isFetching ? null : members.data.general.map((col, i) => (
+                            <div key={i}>
+                                <SubHead>{col.name}</SubHead>
+                                <List>
+                                    {col.achievements.map((ach, j) => (
+                                        <li className="text-sm sm:text-base" key={j}>{ach}</li>
+                                    ))}
+                                </List>
+                            </div>
+                        ))}
+                    </div>
+                </Container>
                 <footer className="flex flex-row justify-center my-3">
                     <p className="text-xs">Эта страница была обновлена 14 ноября 2021 г.</p>
                 </footer>
