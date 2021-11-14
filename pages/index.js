@@ -23,40 +23,65 @@ import Wrapper from "../components/wrapper"
 const DOCUMENTS = [
   {
     title: "Положение о РКСЗОХ",
-    href: "/docs/npa/blank.pdf",
-    lastUpdated: "14 ноября 2021"
+    href: "/docs/npa/articles-of-incorporation.pdf",
+    lastUpdated: "14 ноября 2021",
+    status: "90%"
   },
   {
     title: "Стратегия развития олимпийского движения по химии",
-    href: "/docs/npa/blank.pdf",
-    lastUpdated: "14 ноября 2021"
+    href: "/docs/npa/strategy.pdf",
+    lastUpdated: "14 ноября 2021",
+    status: "80%"
   },
   {
     title: "Концепция тем и сложности республиканской олимпиады",
-    href: "/docs/npa/blank.pdf",
-    lastUpdated: "14 ноября 2021"
+    href: "/docs/npa/respa-syllabus.pdf",
+    lastUpdated: "14 ноября 2021",
+    status: "80%"
   },
   {
     title: "Алгоритм определения состава сборной РК",
-    href: "/docs/npa/blank.pdf",
-    lastUpdated: "14 ноября 2021"
+    href: "/docs/npa/national-team-selection.pdf",
+    lastUpdated: "14 ноября 2021",
+    status: "50%"
   },
   {
     title: "Минимальный «Комплект заданий»",
-    href: "/docs/npa/blank.pdf",
-    lastUpdated: "14 ноября 2021"
+    href: "/docs/npa/problem-set-definition.pdf",
+    lastUpdated: "14 ноября 2021",
+    status: "90%"
   },
   {
     title: "Правила оформления задач",
-    href: "/docs/npa/blank.pdf",
-    lastUpdated: "14 ноября 2021"
+    href: "/docs/npa/style-guide.pdf",
+    lastUpdated: "14 ноября 2021",
+    status: "80%"
   },
   {
     title: "Правила проверки работ учащихся",
-    href: "/docs/npa/blank.pdf",
-    lastUpdated: "14 ноября 2021"
+    href: "/docs/npa/guide-for-marking.pdf",
+    lastUpdated: "14 ноября 2021",
+    status: "80%"
   }
 ]
+
+const STATUSCOLORS = {
+  0: "text-red-600",
+  25: "text-red-500",
+  50: "text-red-400",
+  60: "text-amber-400",
+  70: "text-amber-300",
+  80: "text-green-300",
+  90: "text-green-400"
+}
+
+function lowestBorder(status) {
+  var border = 0
+  for (const [key, value] of Object.entries(STATUSCOLORS)) {
+    if (status >= key) { border = key } else { break; } ;
+  }
+  return border
+}
 
 export default function Home() {
   return (
@@ -76,10 +101,12 @@ export default function Home() {
 
         <Container>
           <Heading>Официальные документы</Heading>
-          <Paragraph>В этом разделе всегда будет полный и актуальный список всех документов, утвержденных Коллегией. Эти документы выступают истиной первой инстанции во всех вопросах, связанный с деятельностью Коллегии, а поэтому могут быть написаны строгим языком. В других разделах этого сайта мы можем представлять ту же информацию в более наглядном и простом виде, но, если когда-нибудь что-то написанное в других разделах этого сайта не будет соответствовать информации в этих документах &mdash; более верной является информация в этих документах.</Paragraph>
+          <Paragraph>В этом разделе всегда будет полный и актуальный список всех документов, утвержденных Коллегией. Эти документы выступают истиной первой инстанции во всех вопросах, связанных с деятельностью Коллегии, а поэтому могут быть написаны строгим языком. В других разделах этого сайта мы можем представлять ту же информацию в более наглядном и простом виде, но, если когда-нибудь что-то написанное в других разделах этого сайта не будет соответствовать информации в этих документах &mdash; более верной является информация в этих документах.</Paragraph>
+          <SubHead>Важно: эти документы еще в разработке</SubHead>
+          <Paragraph>Коллегия осознает, что чем легче менять правила, тем менее устойчив институт. Однако, поскольку деятельность Коллегии не является основным родом деятельности (и источником заработка) для всех членов Коллегии, мы вынуждены дорабатывать документы до оптимального состояния по мере возможности. Однако, мы поставили задачу довести все документы до ума до ежегодного собрания Коллегии в августе 2022 г. После этого, правки можно будет вносить не чаще одного раза в год. Некоторые документы более сырые, чем другие.</Paragraph>
           <List>
             {DOCUMENTS ? DOCUMENTS.map((doc, i) => (
-              <li key={i}><Click href={doc.href} title={doc.title} /> <span className="text-xs sm:text-sm italic">(Обновлено: {doc.lastUpdated})</span></li>
+              <li key={i}><Click href={doc.href} title={doc.title} /> <span className="text-xs sm:text-sm italic">(Обновлено: {doc.lastUpdated}; <span className={``}>{doc.status}</span>)</span></li> //${STATUSCOLORS[lowestBorder(doc.status)]}
             )) : null}
           </List>
         </Container>

@@ -18,10 +18,11 @@ function MyApp({ Component, pageProps }) {
           <li className={router.asPath == "/" ? "text-accent-500" : ""}><Link href="/">Главная</Link></li>
           <li className={router.asPath == "/members" ? "text-accent-500" : ""}><Link href="/members">Состав</Link></li>
           <li className={router.asPath == "/join" ? "text-accent-500" : ""}><Link href="/join">Вступить</Link></li>
+          <li className={router.asPath == "/reports" ? "text-accent-500" : ""}><Link href="/reports">Отчеты</Link></li>
         </ul>
       </nav>
       <Component {...pageProps} />
-      
+      <p className="text-red-600 text-red-500 text-red-400 text-amber-400 text-amber-300 text-green-300 text-green-400"></p>
       
     </div>
   )

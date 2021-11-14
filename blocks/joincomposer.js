@@ -15,7 +15,7 @@ export default function JoinComposer() {
           </List>
           <Paragraph>Если вы соответствуете критериям выше, вам нужно:</Paragraph>
           <Olist>
-            <li>Составить как минимум два <Click href="" title="комплекта заданий"/> в соответствии <Click href="" title="правилами оформления"/></li>
+            <li>Составить как минимум два <Click href="/docs/npa/problem-set-definition.pdf" title="комплекта заданий"/> в соответствии с <Click href="/docs/npa/style-guide.pdf" title="правилами оформления"/></li>
             <li>Отправить свои комплекты заданий на <Click href="mailto:problems@qazcho.kz" title="электронную почту Коллегии"/>, сопроводив свое письмо описанием того, как вы соответствуете требованиям выше</li>
           </Olist>
       </>
