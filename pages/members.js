@@ -51,6 +51,10 @@ export default function Members() {
                       <li key={i}>{sup}</li>
                     ))}
                   </List>
+                  <SubHead>врио Председателя Высшего совета</SubHead>
+                  <Paragraph>Моргунов А.</Paragraph>
+                  <SubHead>врио Заместителя Председателя Высшего совета</SubHead>
+                  <Paragraph>Тасанов А.</Paragraph>
                 </Container>
                 <Container>
                     <Heading>Участники общего собрания Коллегии:</Heading>
