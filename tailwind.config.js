@@ -24,7 +24,7 @@ module.exports = {
       blue: colors.blue,
       yellow: colors.amber,
       green: colors.emerald,
-      accent: colors.teal,
+      accent: colors.sky,
     },
     opacity: {
       '0': '0',
