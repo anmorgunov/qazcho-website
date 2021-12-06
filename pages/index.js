@@ -24,7 +24,7 @@ const DOCUMENTS = [
   {
     title: "Положение о РКСЗОХ",
     href: "/docs/npa/articles-of-incorporation.pdf",
-    lastUpdated: "17 ноября 2021",
+    lastUpdated: "5 декабря 2021",
     status: "90%"
   },
   {
@@ -141,7 +141,7 @@ export default function Home() {
         </Container>
         
         <footer className="flex flex-row justify-center my-3">
-          <p className="text-xs">Эта страница была обновлена 18 ноября 2021 г.</p>
+          <p className="text-xs">Эта страница была обновлена 5 декабря 2021 г.</p>
         </footer>
       </Wrapper>
 
