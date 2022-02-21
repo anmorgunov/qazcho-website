@@ -1,17 +1,10 @@
 import Head from 'next/head'
 // import { push } from "@socialgouv/matomo-next";
 import Container from "../components/container"
-import Title from "../components/title";
 import Heading from "../components/heading";
-import Paragraph from "../components/paragraph";
 import Click from "../components/click";
 import List from "../components/list";
-import Olist from "../components/orderlist";
-import SubHead from "../components/subheading";
 import Wrapper from "../components/wrapper"
-import JoinComposer from '../blocks/joincomposer';
-import JoinWatcher from '../blocks/joinwatch';
-import JoinJury from '../blocks/joinjury';
 
 const PUBPROTOCOLS = [
     {
