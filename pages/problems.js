@@ -5,6 +5,14 @@ import Heading from "../components/heading";
 import Click from "../components/click";
 import List from "../components/list";
 import Wrapper from "../components/wrapper"
+import Subheading from "../components/subheading"
+
+const OBLAST = [
+    {
+        title: "Шаблон оценивания",
+        href: "/docs/templates/oblast.xlsx"
+    }
+]
 
 const PROBLEMS = [
     {
@@ -56,6 +64,13 @@ export default function Reports() {
             <Wrapper>
                 <Container>
                     <Heading>Официальные задачи и решения:</Heading>
+                    <Subheading>Областной этап</Subheading>
+                    <List>
+                        {OBLAST ? OBLAST.map((doc, i) => (
+                            <li key={i}><Click title={doc.title} href={doc.href} /></li>
+                        )) : null}
+                    </List>
+                    <Subheading>Районный этап</Subheading>
                     <List>
                         {PROBLEMS ? PROBLEMS.map((doc, i) => (
                             <li key={i}><Click title={doc.title} href={doc.href} /></li>
