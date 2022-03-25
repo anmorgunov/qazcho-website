@@ -64,7 +64,7 @@ const OBLAST = [
 
 const PROBLEMS = [
     {
-        title: "ОблХО. Задачи и решения (9-11 кл.)",
+        title: "РайХО. Задачи и решения (9-11 кл.)",
         href: "https://olympiads.bc-pf.org/chemistry/region/2022"
     }
 ]
@@ -86,7 +86,7 @@ export default function Reports() {
                             <li key={i}><Click title={doc.title} href={doc.href} /></li>
                         )) : null}
                     </List>
-                    <Subheading>Облонный этап</Subheading>
+                    <Subheading>Районный этап</Subheading>
                     <List>
                         {PROBLEMS ? PROBLEMS.map((doc, i) => (
                             <li key={i}><Click title={doc.title} href={doc.href} /></li>
