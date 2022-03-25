@@ -49,6 +49,10 @@ const OBLAST = [
         href: "/docs/problems/chem11-1-sol.pdf"
     },
     {
+        title: "ОблХО. 2 тур. Задачи",
+        href: "/docs/problems/chem-2-tasks.pdf"
+    },
+    {
         title: "ОблХО. 9 класс. 2 тур. Решения",
         href: "/docs/problems/chem9-2-sol.pdf"
     },
