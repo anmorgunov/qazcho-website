@@ -9,6 +9,10 @@ import Subheading from "../components/subheading"
 
 const OBLAST = [
     {
+        title: "Список исправлений в официальные комплекты решений",
+        href: "/docs/problems/errata.pdf"
+    },
+    {
         title: "Шаблон оценивания",
         href: "/docs/templates/oblast.xlsx"
     },
@@ -98,7 +102,7 @@ export default function Reports() {
                     </List>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 25 марта 2022 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 26 марта 2022 г.</p>
                 </footer>
             </Wrapper>
           </div>
