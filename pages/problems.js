@@ -80,7 +80,7 @@ export default function Reports() {
       return (
           <div>
             <Head>
-                <title>Официальные комплекты задач | QazChO</title>
+                <title>Официальные комплекты задач и решений | QazChO</title>
                 <meta name="description" content="Отчеты республиканской коллегии составителей задач по олимпиадной химии" />
                 <meta name="keywords" content="составители олимпиад в Республике Казахстан, олимпийское движение Республики Казахстан по химии, составители и жюри республиканских олимпиад" />
                 <link rel="icon" href="/favicon.ico" />

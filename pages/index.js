@@ -42,7 +42,7 @@ const DOCUMENTS = [
   {
     title: "Алгоритм определения состава сборной РК",
     href: "/docs/npa/national-team-selection.pdf",
-    lastUpdated: "17 ноября 2021",
+    lastUpdated: "24 марта 2021",
     status: "60%"
   },
   {

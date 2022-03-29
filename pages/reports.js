@@ -21,6 +21,19 @@ const PUBPROTOCOLS = [
         title: "Протокол №03",
         date: "5 декабря 2021",
         href: "/docs/public-protocols/protocol3.pdf"
+    },
+    {
+        title: "Протокол №04",
+        date: "24 марта 2022",
+        href: "/docs/public-protocols/protocol4.pdf"
+    }
+]
+
+const PUBLETTERS = [
+    {
+        title: "Об определении состава сборной для ММО 2022",
+        date: "29 марта 2022",
+        href: "/docs/letters/mendel2022notification.pdf"
     }
 ]
 export default function Reports() {
@@ -34,6 +47,14 @@ export default function Reports() {
             </Head>
             <Wrapper>
                 <Container>
+                    <Heading>Письма от Коллегии:</Heading>
+                    <List>
+                        {PUBLETTERS ? PUBLETTERS.map((doc, i) => (
+                            <li key={i}><Click title={doc.title} href={doc.href} /> (от {doc.date})</li>
+                        )) : null}
+                    </List>
+                </Container>
+                <Container>
                     <Heading>Протокола собраний Коллегии:</Heading>
                     <List>
                         {PUBPROTOCOLS ? PUBPROTOCOLS.map((doc, i) => (
@@ -42,7 +63,7 @@ export default function Reports() {
                     </List>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 5 декабря 2021 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 29 марта 2022 г.</p>
                 </footer>
             </Wrapper>
           </div>
