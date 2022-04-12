@@ -43,9 +43,6 @@ export default function Members() {
                   <Heading>
                     Состав Высшего совета:
                   </Heading>
-                  <Paragraph>
-                    При учреждении Коллегии был определен список лиц, кому выдается официальное приглашение стать частью Высшего совета Коллегии. Приглашение действительно до 31 декабря 2021 г. Ниже представлен список лиц, которым выслано приглашение и в скобках указано если данный человек принял приглашение.
-                  </Paragraph>
                   <List>
                     {members.isFetching ? null : members.data.supreme.sort().map((sup, i) => (
                       <li key={i}>{sup}</li>
@@ -73,7 +70,7 @@ export default function Members() {
                     </div>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 5 декабря 2021 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 12 апреля 2022 г.</p>
                 </footer>
             </Wrapper>
           </div>
