@@ -9,6 +9,30 @@ import Subheading from "../components/subheading"
 
 const JUNIOR = [
     {
+        title: "Областной этап. 7 кл. Задания (рус)",
+        href: "/docs/problems/junior/oblast/chem7-junior-tasks-rus.pdf"
+    },
+    {
+        title: "Областной этап. 7 кл. Задания (каз)",
+        href: "/docs/problems/junior/oblast/chem7-junior-tasks-qaz.pdf"
+    },
+    {
+        title: "Областной этап. 7 кл. Решения",
+        href: "/docs/problems/junior/oblast/chem7-junior-sol.pdf"
+    },
+    {
+        title: "Областной этап. 8 кл. Задания (рус)",
+        href: "/docs/problems/junior/oblast/chem8-junior-tasks-rus.pdf"
+    },
+    {
+        title: "Областной этап. 8 кл. Задания (каз)",
+        href: "/docs/problems/junior/oblast/chem8-junior-tasks-qaz.pdf"
+    },
+    {
+        title: "Областной этап. 8 кл. Решения",
+        href: "/docs/problems/junior/oblast/chem8-junior-sol.pdf"
+    },
+    {
         title: "Районный этап. 7 кл. Задания (рус)",
         href: "/docs/problems/junior/region/chem7-junior-tasks-rus.pdf"
     },
@@ -83,7 +107,7 @@ export default function Reports() {
                     </List>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 12 апреля 2022 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 15 апреля 2022 г.</p>
                 </footer>
             </Wrapper>
           </div>
