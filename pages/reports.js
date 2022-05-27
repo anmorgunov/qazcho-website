@@ -26,6 +26,21 @@ const PUBPROTOCOLS = [
         title: "Протокол №04",
         date: "24 марта 2022",
         href: "/docs/public-protocols/protocol4.pdf"
+    },
+    {
+        title: "Протокол №05",
+        date: "5 апреля 2022",
+        href: "/docs/public-protocols/protocol5_Redacted.pdf"
+    },
+    {
+        title: "Протокол №07",
+        date: "25 мая 2022",
+        href: "/docs/public-protocols/protocol7.pdf"
+    },
+    {
+        title: "Протокол №08",
+        date: "25 мая 2022",
+        href: "/docs/public-protocols/protocol8.pdf"
     }
 ]
 
@@ -63,7 +78,7 @@ export default function Reports() {
                     </List>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 29 марта 2022 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 27 мая 2022 г.</p>
                 </footer>
             </Wrapper>
           </div>
