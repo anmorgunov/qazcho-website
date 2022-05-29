@@ -41,6 +41,11 @@ const PUBPROTOCOLS = [
         title: "Протокол №08",
         date: "25 мая 2022",
         href: "/docs/public-protocols/protocol8.pdf"
+    },
+    {
+        title: "Аналитическая записка по результатам РО-2022",
+        date: "29 мая 2022",
+        href: "/docs/public-protocols/qazcho-respa-analysis.pdf"
     }
 ]
 
