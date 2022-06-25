@@ -43,6 +43,11 @@ const PUBPROTOCOLS = [
         href: "/docs/public-protocols/protocol8.pdf"
     },
     {
+        title: "Протокол №09",
+        date: "19 июня 2022",
+        href: "/docs/public-protocols/protocol9.pdf"
+    },
+    {
         title: "Аналитическая записка по результатам РО-2022",
         date: "29 мая 2022",
         href: "/docs/public-protocols/qazcho_respa_analysis.pdf"
@@ -54,6 +59,11 @@ const PUBLETTERS = [
         title: "Об определении состава сборной для ММО 2022",
         date: "29 марта 2022",
         href: "/docs/letters/mendel2022notification.pdf"
+    },
+    {
+        title: "О результатах отбора в сборную РК на IChO 2022",
+        date: "15 июня 2022",
+        href: "/docs/letters/icho2022selection.pdf"
     }
 ]
 export default function Reports() {
