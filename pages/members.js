@@ -48,10 +48,10 @@ export default function Members() {
                       <li key={i}>{sup}</li>
                     ))}
                   </List>
-                  <SubHead>врио Председателя Высшего совета</SubHead>
+                  <SubHead>Председатель Высшего совета</SubHead>
                   <Paragraph>Моргунов А.</Paragraph>
-                  <SubHead>врио Заместителя Председателя Высшего совета</SubHead>
-                  <Paragraph>Тасанов А.</Paragraph>
+                  <SubHead>Заместитель Председателя Высшего совета</SubHead>
+                  <Paragraph>Молдагулов Г.</Paragraph>
                 </Container>
                 <Container>
                     <Heading>Участники общего собрания Коллегии:</Heading>
@@ -70,7 +70,7 @@ export default function Members() {
                     </div>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 12 апреля 2022 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 8 сентября 2022 г.</p>
                 </footer>
             </Wrapper>
           </div>

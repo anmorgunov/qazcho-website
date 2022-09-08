@@ -36,7 +36,7 @@ export default function Join() {
                     <JoinJury />
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 5 декабря 2021 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 27 августа 2022 г.</p>
                 </footer>
             </Wrapper>
           </div>

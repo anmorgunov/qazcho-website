@@ -6,6 +6,19 @@ import Click from "../components/click";
 import List from "../components/list";
 import Wrapper from "../components/wrapper"
 
+const REPORTS = [
+    {
+        title: "Аналитическая записка по результатам РО-2022",
+        date: "29 мая 2022",
+        href: "/docs/reports/qazcho_respa_analysis.pdf"
+    },
+    {
+        title: "Отчет за 2021-2022 учебный год",
+        date: "27 августа 2022",
+        href: "/docs/reports/2021-2022-report.pdf"
+    }
+]
+
 const PUBPROTOCOLS = [
     {
         title: "Протокол №01",
@@ -48,10 +61,10 @@ const PUBPROTOCOLS = [
         href: "/docs/public-protocols/protocol9.pdf"
     },
     {
-        title: "Аналитическая записка по результатам РО-2022",
-        date: "29 мая 2022",
-        href: "/docs/public-protocols/qazcho_respa_analysis.pdf"
-    }
+        title: "Протокол №10",
+        date: "27 августа 2022",
+        href: "/docs/public-protocols/protocol10.pdf"
+    },
 ]
 
 const PUBLETTERS = [
@@ -77,6 +90,14 @@ export default function Reports() {
             </Head>
             <Wrapper>
                 <Container>
+                    <Heading>Отчеты Коллегии:</Heading>
+                    <List>
+                        {REPORTS ? REPORTS.map((doc, i) => (
+                            <li key={i}><Click title={doc.title} href={doc.href} /> (от {doc.date})</li>
+                        )) : null}
+                    </List>
+                </Container>
+                <Container>
                     <Heading>Письма от Коллегии:</Heading>
                     <List>
                         {PUBLETTERS ? PUBLETTERS.map((doc, i) => (
@@ -93,7 +114,7 @@ export default function Reports() {
                     </List>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 27 мая 2022 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 8 сентября 2022 г.</p>
                 </footer>
             </Wrapper>
           </div>
