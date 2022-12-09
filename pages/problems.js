@@ -12,6 +12,7 @@ const RESPA = {
     "2022-2023": [
         {
             title: "Районный этап. Скоро!",
+            suffix: `<img width="20%" src="/zhdun.png"></img>`
             // href: ""
         }
     ],
@@ -65,7 +66,7 @@ export default function Reports() {
                     <SubSubHead>Республиканская олимпиада</SubSubHead>
                     <List>
                         {RESPA ? RESPA["2022-2023"].map((doc, i) => (
-                            <li key={i}><Click title={doc.title} href={doc.href} /></li>
+                            doc.href ? <li key={i}><Click title={doc.title} href={doc.href}/></li> : <li>{doc.title}<span dangerouslySetInnerHTML={{ __html: doc.suffix}}></span></li>
                         )) : null}
                     </List>
                     <SubSubHead>Президентская олимпиада</SubSubHead>

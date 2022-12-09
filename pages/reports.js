@@ -65,6 +65,11 @@ const PUBPROTOCOLS = [
         date: "27 августа 2022",
         href: "/docs/public-protocols/protocol10.pdf"
     },
+    {
+        title: "Протокол №11",
+        date: "9 декабря 2022",
+        href: "/docs/public-protocols/protocol11_redacted.pdf"
+    }
 ]
 
 const PUBLETTERS = [
@@ -114,7 +119,7 @@ export default function Reports() {
                     </List>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 8 сентября 2022 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 9 декабря 2022 г.</p>
                 </footer>
             </Wrapper>
           </div>
