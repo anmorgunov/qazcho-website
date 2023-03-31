@@ -69,6 +69,11 @@ const PUBPROTOCOLS = [
         title: "Протокол №11",
         date: "9 декабря 2022",
         href: "/docs/public-protocols/protocol11_redacted.pdf"
+    },
+    {
+        title: "Протокол №12",
+        date: "2 февраля 2023",
+        href: "/docs/public-protocols/protocol12_redacted.pdf"
     }
 ]
 
