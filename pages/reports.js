@@ -16,6 +16,11 @@ const REPORTS = [
         title: "Отчет за 2021-2022 учебный год",
         date: "27 августа 2022",
         href: "/docs/reports/2021-2022-report.pdf"
+    },
+    {
+        title: "Профиль участника РО (2022-2023 уч. год)",
+        date: "7 апреля 2023",
+        href: "/docs/reports/ro2023profile.pdf"
     }
 ]
 
@@ -74,6 +79,21 @@ const PUBPROTOCOLS = [
         title: "Протокол №12",
         date: "2 февраля 2023",
         href: "/docs/public-protocols/protocol12_redacted.pdf"
+    },
+    {
+        title: "Протокол №13",
+        date: "24 февраля 2023",
+        href: "/docs/public-protocols/protocol13_redacted.pdf"
+    },
+    {
+        title: "Протокол №14",
+        date: "30 марта 2023",
+        href: "/docs/public-protocols/protocol14.pdf"
+    },
+    {
+        title: "Протокол №15",
+        date: "3 апреля 2023",
+        href: "/docs/public-protocols/protocol15.pdf"
     }
 ]
 
@@ -124,7 +144,7 @@ export default function Reports() {
                     </List>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 9 декабря 2022 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 8 апреля 2023 г.</p>
                 </footer>
             </Wrapper>
           </div>

@@ -73,6 +73,48 @@ const RESPA = {
 }
 
 const JUNIOR = {
+    "2022-2023": [
+        {
+            title: "Финал. 7 кл. Задания (рус)",
+            href: "/docs/problems/junior/chem7-tasks-rus.pdf",
+        },
+        {
+            title: "Финал. 7 кл. Решения (рус)",
+            href: "/docs/problems/junior/chem7-sol-rus.pdf",
+        },
+        {
+            title: "Финал. 7 кл. Бланки ответов",
+            href: "/docs/problems/junior/chem7-1-blank.pdf",
+        },
+        {
+            title: "Финал. 8 кл. Задания (рус)",
+            href: "/docs/problems/junior/chem8-tasks-rus.pdf",
+        },
+        {
+            title: "Финал. 8 кл. Решения (рус)",
+            href: "/docs/problems/junior/chem8-sol-rus.pdf",
+        },
+        {
+            title: "Финал. 8 кл. Бланки ответов",
+            href: "/docs/problems/junior/chem8-1-blank.pdf",
+        },
+        {
+            title: "Финал. 7 кл. Задания (каз)",
+            href: "/docs/problems/junior/chem7-tasks-kaz.pdf",
+        },
+        {
+            title: "Финал. 7 кл. Решения (каз)",
+            href: "/docs/problems/junior/chem7-sol-kaz.pdf",
+        },
+        {
+            title: "Финал. 8 кл. Решения (каз)",
+            href: "/docs/problems/junior/chem8-sol-kaz.pdf",
+        },
+        {
+            title: "Финал. 8 кл. Задания (каз)",
+            href: "/docs/problems/junior/chem8-tasks-kaz.pdf",
+        },
+    ],
     "2021-2022": [
         {
             title: "Районный, областной и заключительный этапы, задания и решения (7-8 кл.)",
@@ -107,6 +149,12 @@ export default function Reports() {
                     <List>
                         {RESPA ? RESPA["2022-2023"].map((doc, i) => (
                             doc.href ? <li key={i}><Click title={doc.title} href={doc.href}/></li> : <li>{doc.title}<span dangerouslySetInnerHTML={{ __html: doc.suffix}}></span></li>
+                        )) : null}
+                    </List>
+                    <SubSubHead>Юниорская олимпиада</SubSubHead>
+                    <List>
+                        {JUNIOR ? JUNIOR["2022-2023"].map((doc, i) => (
+                            <li key={i}><Click title={doc.title} href={doc.href} /></li>
                         )) : null}
                     </List>
                     <SubSubHead>Президентская олимпиада</SubSubHead>
