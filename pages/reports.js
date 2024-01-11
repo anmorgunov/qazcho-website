@@ -25,77 +25,82 @@ const REPORTS = [
 ]
 
 const PUBPROTOCOLS = [
-    {
-        title: "Протокол №01",
-        date: "14 ноября 2021",
-        href: "/docs/public-protocols/protocol1.pdf"
-    },
-    {
-        title: "Протокол №02",
-        date: "17 ноября 2021",
-        href: "/docs/public-protocols/protocol2.pdf"
-    },
-    {
-        title: "Протокол №03",
-        date: "5 декабря 2021",
-        href: "/docs/public-protocols/protocol3.pdf"
-    },
-    {
-        title: "Протокол №04",
-        date: "24 марта 2022",
-        href: "/docs/public-protocols/protocol4.pdf"
-    },
-    {
-        title: "Протокол №05",
-        date: "5 апреля 2022",
-        href: "/docs/public-protocols/protocol5_Redacted.pdf"
-    },
-    {
-        title: "Протокол №07",
-        date: "25 мая 2022",
-        href: "/docs/public-protocols/protocol7.pdf"
-    },
-    {
-        title: "Протокол №08",
-        date: "25 мая 2022",
-        href: "/docs/public-protocols/protocol8.pdf"
-    },
-    {
-        title: "Протокол №09",
-        date: "19 июня 2022",
-        href: "/docs/public-protocols/protocol9.pdf"
-    },
-    {
-        title: "Протокол №10",
-        date: "27 августа 2022",
-        href: "/docs/public-protocols/protocol10.pdf"
-    },
-    {
-        title: "Протокол №11",
-        date: "9 декабря 2022",
-        href: "/docs/public-protocols/protocol11_redacted.pdf"
-    },
-    {
-        title: "Протокол №12",
-        date: "2 февраля 2023",
-        href: "/docs/public-protocols/protocol12_redacted.pdf"
-    },
-    {
-        title: "Протокол №13",
-        date: "24 февраля 2023",
-        href: "/docs/public-protocols/protocol13_redacted.pdf"
-    },
-    {
-        title: "Протокол №14",
-        date: "30 марта 2023",
-        href: "/docs/public-protocols/protocol14.pdf"
-    },
-    {
-        title: "Протокол №15",
-        date: "3 апреля 2023",
-        href: "/docs/public-protocols/protocol15.pdf"
-    }
-]
+  {
+    title: "Протокол №01",
+    date: "14 ноября 2021",
+    href: "/docs/public-protocols/protocol1.pdf",
+  },
+  {
+    title: "Протокол №02",
+    date: "17 ноября 2021",
+    href: "/docs/public-protocols/protocol2.pdf",
+  },
+  {
+    title: "Протокол №03",
+    date: "5 декабря 2021",
+    href: "/docs/public-protocols/protocol3.pdf",
+  },
+  {
+    title: "Протокол №04",
+    date: "24 марта 2022",
+    href: "/docs/public-protocols/protocol4.pdf",
+  },
+  {
+    title: "Протокол №05",
+    date: "5 апреля 2022",
+    href: "/docs/public-protocols/protocol5_Redacted.pdf",
+  },
+  {
+    title: "Протокол №07",
+    date: "25 мая 2022",
+    href: "/docs/public-protocols/protocol7.pdf",
+  },
+  {
+    title: "Протокол №08",
+    date: "25 мая 2022",
+    href: "/docs/public-protocols/protocol8.pdf",
+  },
+  {
+    title: "Протокол №09",
+    date: "19 июня 2022",
+    href: "/docs/public-protocols/protocol9.pdf",
+  },
+  {
+    title: "Протокол №10",
+    date: "27 августа 2022",
+    href: "/docs/public-protocols/protocol10.pdf",
+  },
+  {
+    title: "Протокол №11",
+    date: "9 декабря 2022",
+    href: "/docs/public-protocols/protocol11_redacted.pdf",
+  },
+  {
+    title: "Протокол №12",
+    date: "2 февраля 2023",
+    href: "/docs/public-protocols/protocol12_redacted.pdf",
+  },
+  {
+    title: "Протокол №13",
+    date: "24 февраля 2023",
+    href: "/docs/public-protocols/protocol13_redacted.pdf",
+  },
+  {
+    title: "Протокол №14",
+    date: "30 марта 2023",
+    href: "/docs/public-protocols/protocol14.pdf",
+  },
+  {
+    title: "Протокол №15",
+    date: "3 апреля 2023",
+    href: "/docs/public-protocols/protocol15.pdf",
+  },
+  {
+    title: "Протокол №16",
+    date: "19 августа 2023",
+    href: "/docs/public-protocols/protocol16.pdf",
+  },
+];
 
 const PUBLETTERS = [
     {
@@ -144,7 +149,7 @@ export default function Reports() {
                     </List>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 8 апреля 2023 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 10 января 2024 г.</p>
                 </footer>
             </Wrapper>
           </div>
