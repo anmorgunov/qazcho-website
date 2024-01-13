@@ -5,6 +5,7 @@ import Heading from "../components/heading";
 import Click from "../components/click";
 import List from "../components/list";
 import Wrapper from "../components/wrapper"
+// import Icon from "../components/Analytics";
 
 const REPORTS = [
     {
@@ -147,6 +148,9 @@ export default function Reports() {
                             <li key={i}><Click title={doc.title} href={doc.href} /> (от {doc.date})</li>
                         )) : null}
                     </List>
+                </Container>
+                <Container>
+                  <div className=""><iframe src="/data/qazcho-visits.html" width="110%" height="400px"></iframe></div>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
                     <p className="text-xs">Эта страница была обновлена 10 января 2024 г.</p>
