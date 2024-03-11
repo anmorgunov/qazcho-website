@@ -5,7 +5,7 @@ import Heading from "../components/heading";
 import Click from "../components/click";
 import List from "../components/list";
 import Wrapper from "../components/wrapper"
-// import Icon from "../components/Analytics";
+import PlotlyViews from "../components/ViewsFigure";
 
 const REPORTS = [
     {
@@ -127,45 +127,68 @@ const PUBLETTERS = [
 ]
 export default function Reports() {
       return (
-          <div>
-            <Head>
-                <title>Отчетность Коллегии | QazChO</title>
-                <meta name="description" content="Отчеты республиканской коллегии составителей задач по олимпиадной химии" />
-                <meta name="keywords" content="составители олимпиад в Республике Казахстан, олимпийское движение Республики Казахстан по химии, составители и жюри республиканских олимпиад" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <Wrapper>
-                <Container>
-                    <Heading>Отчеты Коллегии:</Heading>
-                    <List>
-                        {REPORTS ? REPORTS.map((doc, i) => (
-                            <li key={i}><Click title={doc.title} href={doc.href} /> (от {doc.date})</li>
-                        )) : null}
-                    </List>
-                </Container>
-                <Container>
-                    <Heading>Письма от Коллегии:</Heading>
-                    <List>
-                        {PUBLETTERS ? PUBLETTERS.map((doc, i) => (
-                            <li key={i}><Click title={doc.title} href={doc.href} /> (от {doc.date})</li>
-                        )) : null}
-                    </List>
-                </Container>
-                <Container>
-                    <Heading>Протокола собраний Коллегии:</Heading>
-                    <List>
-                        {PUBPROTOCOLS ? PUBPROTOCOLS.map((doc, i) => (
-                            <li key={i}><Click title={doc.title} href={doc.href} /> (от {doc.date})</li>
-                        )) : null}
-                    </List>
-                </Container>
-                <Container>
-                  <div className=""><iframe src="/data/qazcho-visits.html" width="110%" height="400px"></iframe></div>
-                </Container>
-                <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 11 марта 2024 г.</p>
-                </footer>
-            </Wrapper>
-          </div>
-      )
+        <div>
+          <Head>
+            <title>Отчетность Коллегии | QazChO</title>
+            <meta
+              name="description"
+              content="Отчеты республиканской коллегии составителей задач по олимпиадной химии"
+            />
+            <meta
+              name="keywords"
+              content="составители олимпиад в Республике Казахстан, олимпийское движение Республики Казахстан по химии, составители и жюри республиканских олимпиад"
+            />
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
+          <Wrapper>
+            <Container>
+              <Heading>Отчеты Коллегии:</Heading>
+              <List>
+                {REPORTS
+                  ? REPORTS.map((doc, i) => (
+                      <li key={i}>
+                        <Click title={doc.title} href={doc.href} /> (от{" "}
+                        {doc.date})
+                      </li>
+                    ))
+                  : null}
+              </List>
+            </Container>
+            <Container>
+              <Heading>Письма от Коллегии:</Heading>
+              <List>
+                {PUBLETTERS
+                  ? PUBLETTERS.map((doc, i) => (
+                      <li key={i}>
+                        <Click title={doc.title} href={doc.href} /> (от{" "}
+                        {doc.date})
+                      </li>
+                    ))
+                  : null}
+              </List>
+            </Container>
+            <Container>
+              <Heading>Протокола собраний Коллегии:</Heading>
+              <List>
+                {PUBPROTOCOLS
+                  ? PUBPROTOCOLS.map((doc, i) => (
+                      <li key={i}>
+                        <Click title={doc.title} href={doc.href} /> (от{" "}
+                        {doc.date})
+                      </li>
+                    ))
+                  : null}
+              </List>
+            </Container>
+            <Container>
+              <PlotlyViews />
+            </Container>
+            <footer className="flex flex-row justify-center my-3">
+              <p className="text-xs">
+                Эта страница была обновлена 11 марта 2024 г.
+              </p>
+            </footer>
+          </Wrapper>
+        </div>
+      );
 }
