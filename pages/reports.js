@@ -101,6 +101,11 @@ const PUBPROTOCOLS = [
     date: "19 августа 2023",
     href: "/docs/public-protocols/protocol16.pdf",
   },
+  {
+    title: "Протокол №17",
+    date: "3 марта 2024",
+    href: "/docs/public-protocols/protocol17.pdf",
+  },
 ];
 
 const PUBLETTERS = [
@@ -113,6 +118,11 @@ const PUBLETTERS = [
         title: "О результатах отбора в сборную РК на IChO 2022",
         date: "15 июня 2022",
         href: "/docs/letters/icho2022selection.pdf"
+    },
+    {
+        title: "Об определении состава сборной для ММО 2024",
+        date: "4 марта 2024",
+        href: "/docs/letters/mendel2024notification.pdf"
     }
 ]
 export default function Reports() {
@@ -153,7 +163,7 @@ export default function Reports() {
                   <div className=""><iframe src="/data/qazcho-visits.html" width="110%" height="400px"></iframe></div>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 10 января 2024 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 11 марта 2024 г.</p>
                 </footer>
             </Wrapper>
           </div>

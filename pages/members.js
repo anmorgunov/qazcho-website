@@ -49,7 +49,7 @@ export default function Members() {
                     ))}
                   </List>
                   <SubHead>Председатель Высшего совета</SubHead>
-                  <Paragraph>Моргунов А.</Paragraph>
+                  <Paragraph>Жаксылыков А.</Paragraph>
                   <SubHead>Заместитель Председателя Высшего совета</SubHead>
                   <Paragraph>Молдагулов Г.</Paragraph>
                 </Container>
