@@ -106,6 +106,21 @@ const PUBPROTOCOLS = [
     date: "3 марта 2024",
     href: "/docs/public-protocols/protocol17.pdf",
   },
+  {
+    title: "Протокол №18",
+    date: "31 марта 2024",
+    href: "/docs/public-protocols/protocol18.pdf",
+  },
+  {
+    title: "Протокол №19",
+    date: "2 апреля 2024",
+    href: "/docs/public-protocols/protocol19.pdf",
+  },
+  {
+    title: "Протокол №20",
+    date: "4 апреля 2024",
+    href: "/docs/public-protocols/protocol20.pdf",
+  },
 ];
 
 const PUBLETTERS = [
@@ -185,7 +200,7 @@ export default function Reports() {
             </Container>
             <footer className="flex flex-row justify-center my-3">
               <p className="text-xs">
-                Эта страница была обновлена 11 марта 2024 г.
+                Эта страница была обновлена 22 апреля 2024 г.
               </p>
             </footer>
           </Wrapper>

@@ -11,6 +11,78 @@ import SubSubHead from '../components/subsubhead';
 const RESPA = {
     "2023-2024": [
         {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem9-1-tasks-rus.pdf",
+            title: "9 кл. 1 тур (Задачи)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem9-1-sol-rus.pdf",
+            title: "9 кл. 1 тур (Решения)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem9-1-blank-rus.pdf",
+            title: "9 кл. 1 тур (Бланки Ответов)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem9-1-tasks-kaz.pdf",
+            title: "9 кл. 1 тур (Тапсырмалар)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem9-1-sol-kaz.pdf",
+            title: "9 кл. 1 тур (Шешімдер)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem9-1-blank-rus.pdf",
+            title: "9 кл. 1 тур (Жауап Парақтар)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem10-1-tasks-rus.pdf",
+            title: "10 кл. 1 тур (Задачи)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem10-1-sol-rus.pdf",
+            title: "10 кл. 1 тур (Решения)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem10-1-blank-rus.pdf",
+            title: "10 кл. 1 тур (Бланки Ответов)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem10-1-tasks-kaz.pdf",
+            title: "10 кл. 1 тур (Тапсырмалар)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem10-1-sol-kaz.pdf",
+            title: "10 кл. 1 тур (Шешімдер)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem10-1-blank-rus.pdf",
+            title: "10 кл. 1 тур (Жауап Парақтар)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem11-1-tasks-rus.pdf",
+            title: "11 кл. 1 тур (Задачи)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem11-1-sol-rus.pdf",
+            title: "11 кл. 1 тур (Решения)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem11-1-blank-rus.pdf",
+            title: "11 кл. 1 тур (Бланки Ответов)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem11-1-tasks-kaz.pdf",
+            title: "11 кл. 1 тур (Тапсырмалар)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem11-1-sol-kaz.pdf",
+            title: "11 кл. 1 тур (Шешімдер)"
+        },
+        {
+            href: "https://cdn.bc-pf.org/olympiads/chemistry/national/final/2024/chem11-1-blank-rus.pdf",
+            title: "11 кл. 1 тур (Жауап Парақтар)"
+        },
+        {
             title: "Областной этап. Задания и решения (9-11 кл.)",
             href: "https://olympiads.bc-pf.org/chemistry/oblast/2024"
         },
@@ -162,7 +234,7 @@ export default function Reports() {
                     </List>
                 </Container>
                 <footer className="flex flex-row justify-center my-3">
-                    <p className="text-xs">Эта страница была обновлена 10 января 2024 г.</p>
+                    <p className="text-xs">Эта страница была обновлена 30 марта 2024 г.</p>
                 </footer>
             </Wrapper>
           </div>
