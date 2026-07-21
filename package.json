@@ -21,7 +21,7 @@
     "tailwindcss": "^2.2.19"
   },
   "devDependencies": {
-    "eslint": "7",
-    "eslint-config-next": "12.0.3"
+    "eslint": "10",
+    "eslint-config-next": "16.2.10"
   }
 }
